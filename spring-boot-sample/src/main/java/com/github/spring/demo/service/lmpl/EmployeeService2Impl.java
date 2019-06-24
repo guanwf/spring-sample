@@ -3,11 +3,15 @@ package com.github.spring.demo.service.lmpl;
 import com.github.spring.demo.service.IEmployeeService;
 import com.github.spring.demo.service.IVenderService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Slf4j
 @Service("EmployeeService2")
 public class EmployeeService2Impl implements IEmployeeService {
+
+//    @Autowired
+//    private IVenderService venderService2;
 
     private IVenderService venderService;
 
