@@ -43,22 +43,22 @@ public class SpringSapmleApplicationTests {
 	}
 
 	@Autowired
-	IVenderService venderService;
+    IVenderService venderService;
 
 	@Test
 	public void Test3(){
 		venderService.get(1L);
 	}
 
-	@Autowired
-	Person person;
+//	@Autowired
+//	Person person;
 
 	@Test
 	public void Test4(){
 //		ApplicationContext ac = new ClassPathXmlApplicationContext();
 //		Person beanDemo=(Person)ac.getBean("person");
 
-		person.add();
+//		person.add();
 	}
 
 }

@@ -17,12 +17,17 @@
 	<packaging>pom</packaging>
 
 	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
+		<mybatis-plus.version>3.1.0</mybatis-plus.version>
+		<springfox.version>2.6.1</springfox.version>
 	</properties>
 
 	<modules>
 		<module>spring-boot-sample</module>
 		<module>spring-demo-core</module>
+		<module>spring-mysql-demo</module>
 	</modules>
 
 	<dependencies>

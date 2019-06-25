@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.github.spring.sqldemo.mapper.DriverinfoMapper">
+
+    <resultMap id="BaseResultMap" type="com.github.spring.sqldemo.model.Driverinfo">
+        <result column="id" property="id" />
+        <result column="tid" property="tid" />
+        <result column="driverno" property="driverno" />
+        <result column="drivername" property="drivername" />
+        <result column="dtypename" property="dtypename" />
+    </resultMap>
+
+    <select id="selectByPage" resultMap="BaseResultMap" parameterType="com.github.spring.sqldemo.model.Driverinfo">
+        SELECT a.* from driverinfo a WHERE 1=1
+        <if test="driverno != null">
+            AND a.driverno=#{driverno}
+        </if>
+
+        ORDER BY createtime DESC LIMIT #{begin},#{size}
+
+    </select>
+
+
+</mapper>

@@ -11,8 +11,8 @@ import org.springframework.context.annotation.Primary;
 @EnableAutoConfiguration
 public class AutoConfig {
 
-    @Lazy
-    public Person person(){
-        return new Person();
-    }
+//    @Lazy
+//    public Person person(){
+//        return new Person();
+//    }
 }
