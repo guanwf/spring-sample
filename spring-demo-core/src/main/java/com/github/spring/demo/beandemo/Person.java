@@ -1,4 +1,4 @@
-package com.github.spring.demo.model;
+package com.github.spring.demo.beandemo;
 
 import lombok.Data;
 import org.springframework.beans.BeansException;

@@ -1,9 +1,8 @@
-package com.github.spring.demo.model;
+package com.github.spring.demo.beandemo;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 
-//https://blog.csdn.net/u011686226/article/details/52758744
 public class MyBeanPostProcessor implements BeanPostProcessor {
 
     @Override

@@ -7,9 +7,7 @@ import com.github.spring.demo.utils.HttpContextUtil;
 import com.github.spring.demo.utils.IPUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
-import org.aspectj.lang.annotation.Around;
-import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Pointcut;
+import org.aspectj.lang.annotation.*;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.LocalVariableTableParameterNameDiscoverer;
@@ -32,6 +30,11 @@ public class LogAspect {
     @Pointcut("@annotation(com.github.spring.demo.annotation.Log)")
     public void pointcut() {
         // do nothing
+    }
+
+    @Before("pointcut()")
+    public void before() {
+        log.info("已经记录下操作日志@Before 方法执行前");
     }
 
     @Around("pointcut()")
@@ -78,6 +81,11 @@ public class LogAspect {
         }
 
         return result;
+    }
+
+    @After("pointcut()")
+    public void after() {
+        log.info("已经记录下操作日志@After 方法执行后");
     }
 
     private StringBuilder handleParams(StringBuilder params, Object[] args, List paramNames) throws JsonProcessingException {
